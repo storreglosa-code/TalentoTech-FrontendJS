@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+* {
+    font-family: Truculenta;
+    background-color: #F2F3AE;
+    margin: 0 2%;
+}
+
+html{
+    margin: 2%
+
+}
+
+h1{
+    font-family:'Henny Penny';
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p{
+text-align: justify;
+margin: 2% 2%;
+}
+
+h3{
+    margin-left: 4%;
+}
+
+ul{
+    list-style-type: none;
+    font-size: 3vw;
+}
+
+.icons{
+    width: 20px;
+}
