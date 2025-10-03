@@ -9,7 +9,13 @@
 
 html{
     margin: 2%
+}
 
+nav, ul, li{
+    list-style-type: none;
+    font-size: 3vw;
+    display: flex;
+    background-color: orange;
 }
 
 h1{
@@ -21,19 +27,15 @@ h2 {
     text-align: center;
 }
 
+h3{
+    margin-left: 4%;
+}
+
 p{
 text-align: justify;
 margin: 2% 2%;
 }
 
-h3{
-    margin-left: 4%;
-}
-
-ul{
-    list-style-type: none;
-    font-size: 3vw;
-}
 
 .icons{
     width: 20px;
