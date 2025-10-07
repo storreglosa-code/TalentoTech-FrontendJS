@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Muebles Guernica</title>
+</head>
+<body>
+    <h1>
+        ¡Bienvenidos!
+    </h1>
+    <h2>
+        Formulario de registro
+    </h2>
+
+    <form method="post" >
+        <fieldset>
+
+            <label for="username">Usuario</label>
+            <input name="username" type="text" required>
+            
+            <label for="email">Email</label>
+            <input name="email" type="email" required>
+            
+            <label for="password">Contraseña</label>
+            <input name="password" type="password" required>
+            
+            <label for="referencia">¿Cómo llegó a conocernos?</label>
+            <select id="referencia" name="referencia">
+                <option value=""> Seleccione una opción </option>
+                <option value="1"> Instagram </option>
+                <option value="2"> Facebook </option>
+                <option value="3"> Referido por otra persona </option>
+                <option value="4"> Otro </option>
+            </select>
+        </fieldset>
+
+        <input type="submit" value="Registrarse">
+    </form>
+</body>
+</html>

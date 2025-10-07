@@ -1,42 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Federo&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
 
-* {
-    font-family: Truculenta;
-    background-color: #F2F3AE;
-    margin: 0 2%;
-}
-
-html{
-    margin: 2%
-}
-
-nav, ul, li{
-    list-style-type: none;
-    font-size: 3vw;
-    display: flex;
-    background-color: orange;
+body{
+    width: 90%;
+    height: 50vw;
+    background-color: #BCAF9C;
+    color: #3b363d;
+    font-size: 24px;
+    font-family: Federo;
 }
 
 h1{
-    font-family:'Henny Penny';
     text-align: center;
 }
 
-h2 {
+h2{
+    margin-top: 2em;
     text-align: center;
 }
 
-h3{
-    margin-left: 4%;
+form{
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    padding-bottom: 2em;
+    margin: 0 20%;
 }
 
-p{
-text-align: justify;
-margin: 2% 2%;
+label{
+    display: block;
+    margin: 0.5rem 0;
 }
 
+fieldset{
+    border: none;
+    padding: 2em;
+    border-bottom: 2px solid #69626D;
+}
 
-.icons{
-    width: 20px;
+input{
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    border: 2px solid #69626D;
+    border-radius: 8px;
+}
+
+select, option{
+    min-height: 2.6em;
+    margin: 10px 0 0 0;
+    width: 100%;
+    border: 2px solid #69626D;
+    border-radius: 8px;
+}
+
+input[type="submit"]{
+    max-width: 200px;
+    text-align: center;
+    margin: 2em 30%;
+    background-color: #867c73;
+    color: #FFF;
+    font-family: Federo;
+    font-size: 24px;
+}
+
+input[type="submit"]:hover{
+    background-color: #CBBEB3;
 }
