@@ -3,7 +3,7 @@
 body{
     width: 90%;
     height: 50vw;
-    background-color: #BCAF9C;
+    background-color: rgba(251, 251, 251, 0);;
     color: #3b363d;
     font-size: 24px;
     font-family: Federo;
@@ -65,4 +65,57 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     background-color: #CBBEB3;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(241, 241, 241);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+nav li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3b363d;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fc9621;
+}
+
+/* Estilos para íconos */
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  color: #3b363d;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Si querés que los íconos queden más juntos entre sí que los links */
+li.social {
+  margin: 0 8px;
+}
+
+.product{
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover{
+    transform: scale(1.2);
 }
