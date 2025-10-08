@@ -14,14 +14,14 @@
         Formulario de registro
     </h2>
 
-    <form method="post" >
+    <form id="registerForm" method="post" action="http://localhost:3100/api/Authentication/Register">
         <fieldset>
 
-            <label for="username">Usuario</label>
-            <input name="username" type="text" required>
+            <label for="name">Usuario</label>
+            <input name="name" type="text" required>
             
-            <label for="email">Email</label>
-            <input name="email" type="email" required>
+            <label for="emailAddress">Email</label>
+            <input name="emailAddress" type="email" required>
             
             <label for="password">Contraseña</label>
             <input name="password" type="password" required>
@@ -36,7 +36,107 @@
             </select>
         </fieldset>
 
-        <input type="submit" value="Registrarse">
+        <input id="submitBtn" type="submit" value="Registrarse">
     </form>
+
+<div id="message" role="status" aria-live="polite"></div>
+
+<!-- spans para errores por campo (opcional, si la API devuelve errores por propiedad) -->
+<span class="error" data-error-for="name"></span>
+<span class="error" data-error-for="emailAddress"></span>
+<span class="error" data-error-for="password"></span>
+
 </body>
 </html>
+
+<script>
+
+const form = document.getElementById('registerForm');
+const submitBtn = document.getElementById('submitBtn');
+const messageEl = document.getElementById('message');
+
+function setLoading(isLoading) {
+  submitBtn.disabled = isLoading;
+  submitBtn.textContent = isLoading ? 'Enviando...' : 'Registrarse';
+}
+
+function clearMessages() {
+  messageEl.textContent = '';
+  document.querySelectorAll('.error').forEach(el => el.textContent = '');
+}
+
+function showMessage(text, type = 'info') {
+  messageEl.textContent = text;
+  messageEl.className = type; // puedes usar estilos .info .success .error en CSS
+}
+
+function showFieldErrors(errors) {
+  // errors expected as { fieldName: ["msg1","msg2"], ... } or similar
+  if (!errors) return;
+  Object.keys(errors).forEach(field => {
+    const span = document.querySelector(`[data-error-for="${field}"]`);
+    if (span) span.textContent = errors[field].join(' ');
+  });
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();                 // 1 - evita que el form haga submit tradicional (recarga)
+  clearMessages();                    // 2 - limpia mensajes previos
+  setLoading(true);                   // 3 - deshabilita botón y muestra "enviando"
+
+  const data = {
+    name: form.name.value.trim(),           // 4 - leemos inputs y limpiamos espacios
+    emailAddress: form.emailAddress.value.trim(),
+    password: form.password.value
+  };
+
+  try {
+    const response = await fetch('http://localhost:3100/api/Authentication/Register', {
+      method: 'POST',                                   // 5 - método POST
+      headers: { 'Content-Type': 'application/json' }, // 6 - le decimos al servidor que mandamos JSON
+      body: JSON.stringify(data)                       // 7 - convertimos el objeto JS a JSON
+    });
+
+    // 8 - intentamos parsear JSON si el servidor lo devuelve
+    const contentType = response.headers.get('Content-Type') || '';
+    let payload = null;
+    if (contentType.includes('application/json')) {
+      payload = await response.json();
+    } else {
+      // si la respuesta no es JSON (texto, html, etc.)
+      payload = { message: await response.text() };
+    }
+
+    if (response.ok) {
+      // 9 - caso success (status 2xx)
+      showMessage(response.data.stringify(), 'success');
+
+      // ejemplo: si la API devuelve token -> guardarlo y usarlo
+      const token = payload.token ?? payload.Token; // adapta según tu API
+      if (token) {
+        // ⚠️ Opción simple: localStorage (no ideal para secretos)
+        localStorage.setItem('accessToken', token);
+
+        // mejor: guardar en memoria (por ejemplo window.currentToken = token) o usar httpOnly cookie desde el server
+      }
+
+      // opcional: redirigir
+      // window.location.href = '/app/dashboard.html';
+    } else {
+      // 10 - error (4xx/5xx)
+      // show errors if API exposes a structure like { errors: { field: [..] }, message: "..." }
+      if (payload.errors) {
+        showFieldErrors(payload.errors);
+      }
+      const errMsg = payload.message ?? payload.Message ?? JSON.stringify(payload);
+      showMessage(`Error ${response.status}: ${errMsg}`, 'error');
+    }
+  } catch (networkErr) {
+    // 11 - error de red (server caído, CORS, etc.)
+    showMessage('Error de red o conexion: ' + networkErr.message, 'error');
+    console.error(networkErr);
+  } finally {
+    setLoading(false); // 12 - siempre reactivar el botón
+  }
+});
+</script>
