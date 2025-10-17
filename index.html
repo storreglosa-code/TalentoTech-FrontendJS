@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muebles Guernica</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav>
-        <ul class="nav-icons">
-            <li> <img src="media/logoSinFondo.png" width="150px" ></li>
-            <li class="social">
-            <a href="https://www.instagram.com/" target="_blank">
-                <img class="icon" src="/icons/instagram-brands-solid-full.svg" alt="Instagram icon">
-            </a>
-            <a href="https://wa.me/5491168906999" target="_blank">
-                <img class="icon" src="/icons/whatsapp-brands-solid-full.svg" alt="WhatsApp icon">
-            </a>
+    <header>
+        <div class="logo-container">
+            <img class="logo-img" src="media/logoSinFondo.png" width="300px" >
+        </div>
+    </header>
+    <nav class="menu">
+        <ul class="lista-links">
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img class="icon" src="/icons/instagram-brands-solid-full.svg" alt="Instagram icon">
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5491168906999" target="_blank">
+                    <img class="icon" src="/icons/whatsapp-brands-solid-full.svg" alt="WhatsApp icon">
+                </a>
             </li>
 
-            <li><a href="#muebles">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#promociones">Promociones</a></li>
-            <li><a href="#novedades">Novedades</a></li>
+            <li><a class="link" href="#muebles">Inicio</a></li>
+            <li><a class="link" href="#nosotros">Nosotros</a></li>
+            <li><a class="link" href="#productos">Productos</a></li>
+            <li><a class="link" href="#contacto">Contacto</a></li>
+            <!-- <li><a href="#promociones">Promociones</a></li> -->
         </ul>
     </nav>
-    <h2 id="muebles"> Muebles </h2>
-    <section>
+    <h2> Muebles </h2>
+    <section id="muebles">
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, natus. Fugiat, perferendis, nemo ab neque nobis optio ex voluptas exercitationem maxime dolor quam cumque non perspiciatis. Quae earum ipsa perferendis deleniti? Eaque, veniam quibusdam possimus veritatis nostrum architecto corporis officia consequatur minima aliquid ipsa, repudiandae vitae odit quia explicabo similique?
         </p> 
     </section>
 
-    <h2 id="nosotros">Nuestra empresa</h2>
+    <h2 >Nuestra empresa</h2>
 
-    <section>
+    <section id="nosotros">
         <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe corrupti provident debitis, ullam, est ea, quibusdam aperiam officiis explicabo qui delectus laboriosam. Quas recusandae voluptas nihil vero facere laborum officia quia et alias ipsam nulla autem natus veritatis, tenetur officiis cupiditate facilis quisquam asperiores voluptatibus ea minus a aspernatur ipsum. Quas adipisci ducimus natus. Omnis odit repudiandae nemo minus error!</p>
         <img src="media/empresafliar.png" alt="foto familiar" style="border-radius: 10px;">
     </section>    
@@ -43,10 +49,10 @@
     <h3></h3>
   
 
-    <h2 id="productos">Productos</h2>
+    <h2 >Productos</h2>
 
     <h3>LIVING</h3>
-    <section>
+    <section id="productos">
         <h4>Bibliotecas</h4>
         <div class="product">
             <img src="media/biblioteca1.png" width="200px" alt="Biblioteca 1">
@@ -73,6 +79,26 @@
 
     <h3>TOILET</h3>
     <section>
+        <div class="product">
+            <img alt="Producto 1">
+            <p> Lorem ipsum</p>
+        </div>
+        <div class="product">
+            <img alt="Producto 2">
+            <p> Lorem ipsum</p>
+        </div>
+        <div class="product">
+            <img alt="Producto 3">
+            <p> Lorem ipsum</p>
+        </div>
+        <div class="product">
+            <img alt="Producto 4">
+            <p> Lorem ipsum</p>
+        </div>
+    </section>    
+
+    <h3>Contacto</h3>
+    <section id="contacto">
         <div class="product">
             <img alt="Producto 1">
             <p> Lorem ipsum</p>

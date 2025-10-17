@@ -1,12 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Federo&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  /*header*/
+.logo-img{
+  height: 350px;
+  width: 350px;
+}
+
+.logo-container{
+  text-align: center;
+  background-color: #A8B7AB;
+}
+
+.menu{
+  background-color: rgb(241, 241, 241);
+  border-radius: 0 0 10px 10px;
+}
+
+.lista-links{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+  font-size: clamp(16px, 8vw, 32px);
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fc9621;
+}
+
+p {
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*--------De aca para abajo lo hice yo------------*/
+
 body{
-    width: 90%;
-    height: 50vw;
-    background-color: rgba(251, 251, 251, 0);;
-    color: #3b363d;
-    font-size: 24px;
-    font-family: Federo;
+  margin: 0 30px;
+  height: 50vw;
+  color: #000;
+  font-size: 24px;
+  font-family: Federo;
 }
 
 h1{
@@ -67,31 +114,7 @@ input[type="submit"]:hover{
     background-color: #CBBEB3;
 }
 
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: rgb(241, 241, 241);
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0;
-}
 
-nav li {
-  list-style: none;
-  margin: 0 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #3b363d;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #fc9621;
-}
 
 /* Estilos para íconos */
 .icon {
@@ -103,11 +126,6 @@ nav a:hover {
 
 .icon:hover {
   transform: scale(1.2);
-}
-
-/* Si querés que los íconos queden más juntos entre sí que los links */
-li.social {
-  margin: 0 8px;
 }
 
 .product{
