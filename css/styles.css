@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Federo&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
 
 *{
   margin: 0;
@@ -42,9 +43,48 @@ nav a:hover {
   color: #fc9621;
 }
 
-p {
+/*-----------------------------------------------------*/
+
+
+/*SLOGAN*/
+.slogan{
+  text-align: center;
+  font-size: clamp(32px, 8vw, 64px);
+  font-family: Girassol;
+  padding: 30px;
+}
+
+/*Nuestra empresa*/
+
+#nosotros{
+  text-align: center;
+}
+
+.texto {
   font-size: medium;
+  margin: 5px;
+  text-align: justify;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nosotros-container{
+  text-align: center;
+  margin: 10px;
+  
+}
+
+.nosotros-container img{
+  border-radius: 10px;
+}
+
+/*Productos*/
+
+.productos{
+    text-align: center;
+}
+
+.prod-container{
+  display: flex;
 }
 /*--------De aca para abajo lo hice yo------------*/
 
@@ -56,15 +96,29 @@ body{
   font-family: Federo;
 }
 
-h1{
-    text-align: center;
+/* Estilos para íconos */
+.icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+  color: #3b363d;
 }
 
-h2{
-    margin-top: 2em;
-    text-align: center;
+.icon:hover {
+  transform: scale(1.2);
 }
 
+.product{
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover{
+    transform: scale(1.2);
+}
+
+/*FORMULARIO DE REGISTRO*/
 form{
     width: 60vw;
     max-width: 500px;
@@ -114,26 +168,3 @@ input[type="submit"]:hover{
     background-color: #CBBEB3;
 }
 
-
-
-/* Estilos para íconos */
-.icon {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
-  color: #3b363d;
-}
-
-.icon:hover {
-  transform: scale(1.2);
-}
-
-.product{
-    display: inline-block;
-    margin: 0 15px;
-    transition: transform 0.3s ease;
-}
-
-.product:hover{
-    transform: scale(1.2);
-}
