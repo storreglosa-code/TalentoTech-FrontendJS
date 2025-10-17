@@ -53,6 +53,7 @@ nav a:hover {
   font-family: Girassol;
   padding: 30px;
 }
+/*-----------------------------------------------------*/
 
 /*Nuestra empresa*/
 
@@ -76,6 +77,7 @@ nav a:hover {
 .nosotros-container img{
   border-radius: 10px;
 }
+/*-----------------------------------------------------*/
 
 /*Productos*/
 
@@ -85,7 +87,64 @@ nav a:hover {
 
 .prod-container{
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
+
+.prod-item{
+  border: solid 2px #161925;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.imagen-card{
+  width: 280px;
+}
+
+.precio{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.precio-old{
+text-decoration: line-through;
+}
+
+.off{
+  color: green;
+  font-size: 16px;
+}
+
+button{
+  padding: 5px;
+  min-width: 35px;
+  min-height: 35px;
+  /* background-color: #406E8E;
+  color: #FFF; */
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn-mas{
+  border-radius: 0 20px 20px 0px;
+  background-color: rgb(241, 241, 241);
+}
+
+.btn-menos{
+  border-radius: 20px 0 0 20px;
+  background-color: rgb(241, 241, 241);
+}
+.cantidad{
+  padding: 0 40px;
+  text-align: center;
+}
+.btn-carrito{
+margin-bottom: 10px;
+}
+/*-----------------------------------------------------*/
+
+
 /*--------De aca para abajo lo hice yo------------*/
 
 body{
