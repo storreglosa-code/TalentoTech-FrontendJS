@@ -80,7 +80,9 @@ nav a:hover {
 /*-----------------------------------------------------*/
 
 /*Productos*/
-
+.tit-prod{
+  margin-bottom: 3%;
+}
 .productos{
     text-align: center;
 }
