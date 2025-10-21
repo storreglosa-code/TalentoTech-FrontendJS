@@ -2,29 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
 
 *{
-  margin: 0;
+  margin: 0 8px;
   padding: 0;
   box-sizing: border-box;
+  color: #000;
+  font-family: Federo;
+  font-size: clamp(16px, 4vw, 24px);
 }
+
+li{
+  list-style: none;
+}
+
+/*-----------------------------------------------------*/
 
   /*header*/
 .logo-img{
   height: 350px;
   width: 350px;
+  
 }
 
 .logo-container{
   text-align: center;
   background-color: #A8B7AB;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: none;
 }
 
 .menu{
   background-color: rgb(241, 241, 241);
   border-radius: 0 0 10px 10px;
+  border: 1px solid;
 }
 
 .lista-links{
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -36,7 +50,7 @@
   color: #000;
   text-decoration: none;
   font-size: clamp(16px, 8vw, 32px);
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -80,9 +94,10 @@ nav a:hover {
 /*-----------------------------------------------------*/
 
 /*Productos*/
-.tit-prod{
-  margin-bottom: 8px;
+.tit-seccion{
+  margin: 8px 0;
   text-align: center;
+  font-size: clamp(16px, 6vw, 32px);
 }
 
 .tit-item{
@@ -139,7 +154,7 @@ button{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.btn-carrito{
+.botonera{
   text-align: center;
 }
 .btn-agregar{
@@ -147,30 +162,148 @@ button{
   border-radius: 8px;
   color: #FFF;
   background-color: #A8B7AB;
+  font-size: 16px;
 }
 
 .btn-agregar:hover{
-  background-color: darkslategray;
+  background-color: #495D63;
   transform: scale(1.1);
 }
 
 /*-----------------------------------------------------*/
 
+/* Formulario - Contacto */
+.subtit{
+  font-size: clamp(12px, 4vw, 24px);
+  text-align: center;
+  margin: 8px;
+}
 
-/*--------De aca para abajo lo hice yo------------*/
+.form-container{
+  margin: 32px;
+  display: flex;  
+  text-align: center;
+  justify-content: space-around;
+}
 
-body{
-  margin: 0 30px;
-  height: 50vw;
-  color: #000;
-  font-size: 24px;
-  font-family: Federo;
+.formulario{
+  border-radius: 8px;
+  background-color: #A8B7AB;
+  width: 50%;
+  border: 1px solid;  
+  padding: 8px;
+  padding-top: 20px;
+  font-size: clamp(16px, 4vw, 24px);
+  text-align: start;
+}
+
+input{
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 4px;
+  width: 90%;
+  padding: 6px;
+  margin: 16px;
+}
+
+label{
+  margin: 16px;
+}
+
+textarea{
+  margin: 16px;
+  border-radius: 4px;
+  min-height: 100px;
+  max-height: fit-content;
+  min-width: 90%;
+  width: 90% fit-content;
+  max-width: 90%;
+}
+
+.mensaje{
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 8px;
+}
+
+.enviar-container{
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.btn-enviar{
+  margin-top: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.btn-enviar:hover{
+  background-color: darkslategray;
+  transform: scale(1.1);
+  color: aliceblue;
+}
+
+/*-----------------------------------------------------*/
+
+
+/* Footer */
+
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+
+/* Footer logo links */
+
+.footer-links{
+  flex: 1;
+  padding: 8px;
+}
+
+.footer-logos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 32px;
+}
+
+/* Footer Visitanos + Mapa */
+.footer-subtit{
+  display: block;
+  margin-bottom: 16px;
+  text-decoration: underline 0.5px;
+  
+}
+
+.footer-mapa{
+  flex: 1;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  text-align: center;
+}
+
+.mapa{
+  margin: 24px;
+  width: 90%;
+  height: 240px;
+}
+
+/* Footer Redes Sociales */
+.footer-redes{
+  flex: 1;
+  padding: 8px;
+  display: grid;
 }
 
 /* Estilos para íconos */
+
+
 .icon {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   transition: transform 0.3s ease;
   color: #3b363d;
 }
@@ -179,18 +312,24 @@ body{
   transform: scale(1.2);
 }
 
-.product{
-    display: inline-block;
-    margin: 0 15px;
-    transition: transform 0.3s ease;
+@media only screen and (max-width: 500px) {
+  .logo-img{
+    width: 200px;
+    height: 200px;
+  }
+  .nosotros-container img{
+    width: 250;
+    height: 200px;
+  }
 }
 
-.product:hover{
-    transform: scale(1.2);
-}
+
+/*--------De aca para abajo lo hice yo------------*/
+
+
 
 /*FORMULARIO DE REGISTRO*/
-form{
+/* form{
     width: 60vw;
     max-width: 500px;
     min-width: 300px;
@@ -237,5 +376,5 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     background-color: #CBBEB3;
-}
+} */
 
