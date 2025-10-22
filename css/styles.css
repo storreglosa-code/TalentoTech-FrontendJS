@@ -137,8 +137,8 @@ nav a:hover {
 
 .precio-old{
   font-size: medium;
-text-decoration: line-through;
-text-align: left;
+  text-decoration: line-through;
+  text-align: left;
 }
 
 .off{
@@ -157,12 +157,14 @@ button{
 .botonera{
   text-align: center;
 }
+
 .btn-agregar{
   margin-top: 8px;
   border-radius: 8px;
   color: #FFF;
   background-color: #A8B7AB;
   font-size: 16px;
+  transition: transform 0.3s ease;
 }
 
 .btn-agregar:hover{
@@ -180,9 +182,9 @@ button{
 }
 
 .form-container{
-  margin: 32px;
+  margin: 16px 0;
   display: flex;  
-  text-align: center;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -193,7 +195,7 @@ button{
   border: 1px solid;  
   padding: 8px;
   padding-top: 20px;
-  font-size: clamp(16px, 4vw, 24px);
+  font-size: clamp(12px, 4vw, 24px);
   text-align: start;
 }
 
@@ -235,10 +237,11 @@ textarea{
   margin-top: 8px;
   border-radius: 8px;
   font-size: 16px;
+  transition: transform 0.3s ease;
 }
 
 .btn-enviar:hover{
-  background-color: darkslategray;
+  background-color: #495D63;
   transform: scale(1.1);
   color: aliceblue;
 }
@@ -338,8 +341,11 @@ transition: transform 0.3s ease;
     height: 200px;
   }
 }
-
-
+@media only screen and (max-width: 780px) {
+  .form-container{
+    width: 650px;
+  }
+}
 /*--------De aca para abajo lo hice yo------------*/
 
 
