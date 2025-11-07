@@ -353,7 +353,7 @@ transition: transform 0.3s ease;
 
 
 /*FORMULARIO DE REGISTRO*/
-/* form{
+/* #registerForm{
     width: 60vw;
     max-width: 500px;
     min-width: 300px;
@@ -361,18 +361,18 @@ transition: transform 0.3s ease;
     margin: 0 20%;
 }
 
-label{
+#registerForm label{
     display: block;
     margin: 0.5rem 0;
 }
 
-fieldset{
+#registerForm fieldset{
     border: none;
     padding: 2em;
     border-bottom: 2px solid #69626D;
 }
 
-input{
+#registerForm input{
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
@@ -380,7 +380,7 @@ input{
     border-radius: 8px;
 }
 
-select, option{
+#registerForm select, option{
     min-height: 2.6em;
     margin: 10px 0 0 0;
     width: 100%;
@@ -388,7 +388,7 @@ select, option{
     border-radius: 8px;
 }
 
-input[type="submit"]{
+#registerForm input[type="submit"]{
     max-width: 200px;
     text-align: center;
     margin: 2em 30%;
@@ -398,7 +398,7 @@ input[type="submit"]{
     font-size: 24px;
 }
 
-input[type="submit"]:hover{
+#registerForm input[type="submit"]:hover{
     background-color: #CBBEB3;
 } */
 

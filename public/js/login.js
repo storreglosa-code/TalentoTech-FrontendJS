@@ -38,11 +38,14 @@ async function login(email, password) {
       const token = payload.result.token;
       const refreshToken = payload.result.refreshToken;
       const userName = payload.result.userName;
+      const clientId = payload.result.clientId;
 
       // Guardamos token en localStorage
       localStorage.setItem("accessToken", token);
       localStorage.setItem("refreshToken", refreshToken);
       localStorage.setItem("userName", userName);
+      localStorage.setItem("clientId", clientId);
+
 
       showMessage("Login exitoso ✅", "success");
 

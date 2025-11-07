@@ -7,6 +7,10 @@
   const submitBtn = document.getElementById('submitBtn');
   const messageEl = document.getElementById('message');
 
+  function renderToLogin(){
+    window.location.href = '/login.html'
+  }
+
   function setLoading(isLoading) {
     submitBtn.disabled = isLoading;
     submitBtn.value = isLoading ? 'Enviando...' : 'Registrarse';
@@ -76,14 +80,8 @@
         const successMsg = payload.message || 'Registro exitoso. Revisa tu correo para confirmar.';
         showMessage(successMsg, 'success');
 
-        // Si la API devuelve token (poco común en register), guardarlo:
-        const token = payload.token ?? payload.accessToken ?? null;
-        if (token) {
-          localStorage.setItem('accessToken', token);
-        }
-
         // Opcional: redirigir al login después de X segundos
-        // setTimeout(()=> window.location.href = '/index.html', 1500);
+        setTimeout(()=> window.location.href = '/index.html', 1500);
       } else {
         // Manejo de errores: estructura esperada { errors: { field: [...] }, message: "..."}
         if (payload.errors) {
